@@ -47,7 +47,7 @@ public class Personne {
     /**
      * get field
      *
-     * @return firstName
+     * @return upperFirstname
      */
     public String getFirstUpperName() {
         String upperFirstname = this.firstName.toUpperCase();
