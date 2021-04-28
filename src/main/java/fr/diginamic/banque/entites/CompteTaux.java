@@ -11,7 +11,7 @@ public class CompteTaux extends Compte{
 
     @Override
     public String toString() {
-        return this.accountNumber +" "+this.soldNumber +" "+this.remuneration;
+        return super.toString()+" "+ this.remuneration;
     }
 
     /**

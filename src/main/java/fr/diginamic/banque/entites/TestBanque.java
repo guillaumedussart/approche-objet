@@ -6,10 +6,10 @@ public class TestBanque {
 
 
     public static void main(String[] args){
-        Compte compteTest = new Compte("125",369);
-        CompteTaux comptetaux = new CompteTaux("Un125",596,25.0);
+        Compte compte1 = new Compte("125",369);
+        CompteTaux compte2 = new CompteTaux("Un125",596,25.0);
 
-        Object[] objectCompte = {compteTest,comptetaux};
+        Object[] objectCompte = {compte1,compte2};
         for (int i =0;i<objectCompte.length;i++){
             System.out.println(objectCompte[i]);
         }
