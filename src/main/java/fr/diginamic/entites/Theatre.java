@@ -4,23 +4,28 @@ public class Theatre {
     String nom;
     int maxclient;
     int totalclient;
-    int recettetotal;
+    double recettetotal;
 
-    public Theatre(String nom, int maxclient, int totalclient, int recettetotal) {
+    public Theatre(String nom, int maxclient, int totalclient,double recettetotal) {
         this.nom = nom;
         this.maxclient = maxclient;
         this.totalclient = totalclient;
         this.recettetotal = recettetotal;
     }
 
-    public void inscrire(int client, double prix) {
-        if (client < maxclient) {
-            client = totalclient;
+    public boolean inscrire(int nbclient, double prix) {
+        if (nbclient < maxclient) {
+            nbclient = totalclient;
+            recettetotal = nbclient*prix;
+            System.out.println("Le total client est "+ totalclient+" et sa recette est "+recettetotal+" pour le theatre "+nom);
         }
-        if (client >= maxclient) {
-            System.out.println("Le nombre max de client (" + maxclient + ") est atteint");
+        if (nbclient >= maxclient) {
+            System.out.println("Le nombre max de client (" + maxclient + ") est atteint pour le theatre "+nom);
+            return false;
         }
+        return true;
     }
+
 
 
     /**
@@ -83,7 +88,7 @@ public class Theatre {
      * @return recettetotal
      */
     public int getRecettetotal() {
-        return this.recettetotal;
+        return (int) this.recettetotal;
     }
 
     /**

@@ -15,7 +15,7 @@ public class CalculMoyenne {
     public float calcul(){
         System.out.println("Le tableau :");
         for (double nombre:moyenne) {
-            System.out.print(nombre + " ");
+            System.out.print("[ "+nombre + " ]");
         }
         int somme = 0;
         for(int i = 0; i < moyenne.length; i++){
