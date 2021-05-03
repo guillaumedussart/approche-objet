@@ -17,9 +17,13 @@ public class FusionListe {
 
         ArrayList<String> combined = new ArrayList<>();
 
-        for(List<String> list : liste2){
-            liste1.addAll(list);
+        for(int i=0;i<liste1.size();i++){
+            combined.add(liste1.get(i));
         }
+        for(int i=0;i<liste2.size();i++){
+            combined.add(liste2.get(i));
+        }
+        System.out.println(combined);
     }
 
 }
