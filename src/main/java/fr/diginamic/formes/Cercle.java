@@ -1,6 +1,6 @@
 package fr.diginamic.formes;
 
-public class Cercle extends Forme
+public class Cercle extends Forme implements ObjetGeometrique
 {
     public int rayon;
 
@@ -36,5 +36,15 @@ public class Cercle extends Forme
      */
     public void setRayon(int rayon) {
         this.rayon = rayon;
+    }
+
+    @Override
+    public double perimetre() {
+        return 0;
+    }
+
+    @Override
+    public double surface() {
+        return 0;
     }
 }

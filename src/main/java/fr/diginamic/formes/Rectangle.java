@@ -1,6 +1,6 @@
 package fr.diginamic.formes;
 
-public class Rectangle extends Forme
+public class Rectangle extends Forme implements ObjetGeometrique
 {
     public int longueur;
     public int largeur;
@@ -57,5 +57,15 @@ public class Rectangle extends Forme
      */
     public void setLargeur(int largeur) {
         this.largeur = largeur;
+    }
+
+    @Override
+    public double perimetre() {
+        return 0;
+    }
+
+    @Override
+    public double surface() {
+        return 0;
     }
 }
