@@ -28,7 +28,7 @@ public class TestVille {
         System.out.println(minValue);
         System.out.println("---------------------------");
         System.out.println(villeHab);
-        for (String vi : villeHab.keySet()){
+        for (String vi : villeHab.keySet()) {
             System.out.println(vi);
         }
         if (maxValue > 100000) {
@@ -38,18 +38,29 @@ public class TestVille {
 
 
         /*
-        *
-        * */
+         *
+         * */
         List<Ville> villeList = new ArrayList<>();
-        villeList.add(new Ville("Nice",542_000));
-        villeList.add(new Ville("Lille",592_000));
-        villeList.add(new Ville("Marseille",960_000));
-        villeList.add(new Ville("Toulouse",120_000));
-        villeList.add(new Ville("Montpellier",240_000));
+        villeList.add(new Ville("Nice", 542_000));
+        villeList.add(new Ville("Lille", 592_000));
+        villeList.add(new Ville("Marseille", 96_000));
+        villeList.add(new Ville("Toulouse", 120_000));
+        villeList.add(new Ville("Montpellier", 240_000));
+        Ville selected = villeList.get(0);
+        Integer maxVal = Integer.MAX_VALUE;
         Iterator<Ville> villeIterator = villeList.iterator();
-        while(villeIterator.hasNext()){
+        while (villeIterator.hasNext()) {
             Ville ville = villeIterator.next();
-            System.out.println(ville.getNbHab());
+            if (ville.getNbHab() < selected.getNbHab()) {
+                selected = ville;
+            }
         }
+/*
+        villeList.remove(selected);
+*/
+        System.out.println(selected);
+        /*for (Ville v : villeList) {
+            System.out.println(v);
+        }*/
     }
 }
