@@ -1,30 +1,22 @@
 package fr.diginamic.recensement.services.comparators;
 
-import fr.diginamic.recensement.entities.Recensement;
+import fr.diginamic.recensement.entities.Ville;
 
 import java.util.Comparator;
 
-public class ComparatorVille implements Comparator<Recensement> {
+public class ComparatorVille implements Comparator<Ville> {
 
 
     @Override
-    public int compare(Recensement o1, Recensement o2) {
+    public int compare(Ville o1, Ville o2) {
 
-        if(o2.getPopulationTotale() > o1.getPopulationTotale()){
+        if(o2.getPopulation() > o1.getPopulation()){
             return 1;
-        }else if(o2.getPopulationTotale()< o1.getPopulationTotale()){
+        }else if(o2.getPopulation()< o1.getPopulation()){
             return -1;
         }
         return 0;
     }
 
-    @Override
-    public Comparator<Recensement> reversed() {
-        return Comparator.super.reversed();
-    }
 
-    @Override
-    public Comparator<Recensement> thenComparing(Comparator<? super Recensement> other) {
-        return Comparator.super.thenComparing(other);
-    }
 }

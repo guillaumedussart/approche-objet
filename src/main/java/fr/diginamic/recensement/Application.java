@@ -75,6 +75,32 @@ public class Application {
 
                     displayMenu(scanner);
                     break;
+                case 6:
+                    RechercheVilleMaxPopulation rechercheVm = new RechercheVilleMaxPopulation();
+                    System.out.println("______________________________________________");
+
+                    rechercheVm.traiter(listRecensements, scanner);
+                    System.out.println("______________________________________________");
+
+                    displayMenu(scanner);
+                    break;
+                case 7:
+                    RechercheVilleMaxPopulationByDepartement rechercheVmd = new RechercheVilleMaxPopulationByDepartement();
+                    System.out.println("______________________________________________");
+
+                    rechercheVmd.traiter(listRecensements, scanner);
+                    System.out.println("______________________________________________");
+
+                    displayMenu(scanner);
+                case 8:
+                    RechercheVilleMaxPopulationByRegion rechercheVmr = new RechercheVilleMaxPopulationByRegion();
+                    System.out.println("______________________________________________");
+
+                    rechercheVmr.traiter(listRecensements, scanner);
+                    System.out.println("______________________________________________");
+
+                    displayMenu(scanner);
+                    break;
                 default:
                     break;
             }

@@ -15,7 +15,7 @@ public class RecherchePopulationByDepartement extends MenuService {
         int vt = 0;
         String dept = null;
         for (Recensement v : recensements) {
-            if (v.getCodeDept().contains(choice)) {
+            if (v.getCodeDept().equalsIgnoreCase(choice)) {
                 vt += v.getPopulationTotale();
                 dept= v.getNomRegion();
             }

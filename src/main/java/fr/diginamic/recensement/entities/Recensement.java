@@ -1,5 +1,8 @@
 package fr.diginamic.recensement.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Recensement {
     Integer codeRegion;
     String nomRegion;
@@ -115,12 +118,5 @@ public class Recensement {
         return this.populationTotale;
     }
 
-    /**
-     * set field
-     *
-     * @param populationTotale
-     */
-    public void setPopulationTotale(Integer populationTotale) {
-        this.populationTotale = populationTotale;
-    }
+
 }
