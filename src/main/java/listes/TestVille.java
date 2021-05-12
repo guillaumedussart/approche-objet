@@ -4,6 +4,9 @@ import java.util.*;
 
 public class TestVille {
     public static void main(String[] args) {
+
+
+
         Map<String, Integer> villeHab = new HashMap<String, Integer>();
         villeHab.put("Nice", Integer.valueOf(352000));
         villeHab.put("Carcassonne", Integer.valueOf(47800));
@@ -41,11 +44,11 @@ public class TestVille {
          *
          * */
         List<Ville> villeList = new ArrayList<>();
-        villeList.add(new Ville("Nice", 542_000));
-        villeList.add(new Ville("Lille", 592_000));
-        villeList.add(new Ville("Marseille", 96_000));
-        villeList.add(new Ville("Toulouse", 120_000));
-        villeList.add(new Ville("Montpellier", 240_000));
+        villeList.add(new Ville(Continent.AFRIQUE,"Nice", 542_000));
+        villeList.add(new Ville(Continent.AFRIQUE,"Lille", 592_000));
+        villeList.add(new Ville(Continent.AFRIQUE,"Marseille", 96_000));
+        villeList.add(new Ville(Continent.AFRIQUE,"Toulouse", 120_000));
+        villeList.add(new Ville(Continent.AFRIQUE,"Montpellier", 240_000));
         Ville selected = villeList.get(0);
         Integer maxVal = Integer.MAX_VALUE;
         Iterator<Ville> villeIterator = villeList.iterator();

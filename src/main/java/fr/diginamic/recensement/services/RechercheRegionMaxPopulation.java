@@ -20,7 +20,7 @@ public class RechercheRegionMaxPopulation extends MenuService {
             Region region = mapRegion.get(codeRegion);
             if (region == null) {
                 region = new Region(recensement.getNomRegion(), recensement.getCodeRegion(), recensement.getPopulationTotale());
-                mapRegion.put(codeRegion,region);
+                mapRegion.put(codeRegion, region);
             } else {
                 populationRegion = region.getPopulation() + recensement.getPopulationTotale();
                 region.setPopulation(populationRegion);

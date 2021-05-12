@@ -17,7 +17,7 @@ public class RecherchePopulationByRegion extends MenuService {
         for (Recensement v : recensements) {
             if (v.getCodeRegion().equals(choice)) {
                 poulationRegion += v.getPopulationTotale();
-                region= v.getNomRegion();
+                region = v.getNomRegion();
             }
         }
         System.out.println("La region " + region + " a pour population " + poulationRegion);

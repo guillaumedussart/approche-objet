@@ -1,5 +1,6 @@
 package maps;
 
+import listes.Continent;
 import listes.Ville;
 
 import java.util.HashMap;
@@ -11,11 +12,11 @@ public class MapVilles {
     public static void main(String[] args) {
 
         Map<String, Ville> mapVilles = new HashMap<>();
-        mapVilles.put("Nice", new Ville("Nice", 542_000));
-        mapVilles.put("Lille", new Ville("Lille", 592_000));
-        mapVilles.put("Marseille", new Ville("Marseille", 960_000));
-        mapVilles.put("Toulouse", new Ville("Toulouse", 120_000));
-        mapVilles.put("Montpellier", new Ville("Montpellier", 240_000));
+        mapVilles.put("Nice", new Ville(Continent.AFRIQUE,"Nice", 542_000));
+        mapVilles.put("Lille", new Ville(Continent.AFRIQUE,"Lille", 592_000));
+        mapVilles.put("Marseille", new Ville(Continent.AFRIQUE,"Marseille", 960_000));
+        mapVilles.put("Toulouse", new Ville(Continent.AFRIQUE,"Toulouse", 120_000));
+        mapVilles.put("Montpellier", new Ville(Continent.AFRIQUE,"Montpellier", 240_000));
 
 
 

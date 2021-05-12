@@ -1,9 +1,7 @@
 package fr.diginamic.recensement.services;
 
 import fr.diginamic.recensement.entities.Recensement;
-import fr.diginamic.recensement.entities.Region;
 import fr.diginamic.recensement.entities.Ville;
-import fr.diginamic.recensement.services.comparators.ComparatorRegion;
 import fr.diginamic.recensement.services.comparators.ComparatorVille;
 
 import java.util.*;

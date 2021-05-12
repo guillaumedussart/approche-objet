@@ -3,17 +3,21 @@ package listes;
 import java.util.*;
 
 public class Ville {
+    Continent continent;
     String nom;
     Integer nbHab;
 
-    public Ville(String nom, Integer nbHab) {
+
+
+    public Ville(Continent continent, String nom, Integer nbHab) {
+        this.continent = continent;
         this.nom = nom;
         this.nbHab = nbHab;
     }
 
     @Override
     public String toString() {
-        return getNom() + " avec " + getNbHab()+" habitants";
+        return getNom() + " avec " + getNbHab() + " habitants et se trouve sur "+continent;
     }
 
 
@@ -25,6 +29,24 @@ public class Ville {
         }
         return null;
     }
+
+   /* @Override
+    public boolean equals(Object anObject) {
+        if (this == anObject) {
+            return true;
+        }
+        if(!(anObject instanceof Ville)){
+            return false;
+        }
+        Ville other = (Ville) anObject;
+        if (this.nbHab == other.getNbHab()) {
+            return true;
+        }
+        if (this.nom.equals(other.getNom())) {
+            return true;
+        }
+        return false;
+    }*/
 
     /**
      * get field
@@ -60,5 +82,36 @@ public class Ville {
      */
     public void setNbHab(Integer nbHab) {
         this.nbHab = nbHab;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Ville)) return false;
+        Ville ville = (Ville) o;
+        return getNom().equals(ville.getNom()) && getNbHab().equals(ville.getNbHab());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNom(), getNbHab());
+    }
+
+    /**
+     * get field
+     *
+     * @return continent
+     */
+    public Continent getContinent() {
+        return this.continent;
+    }
+
+    /**
+     * set field
+     *
+     * @param continent
+     */
+    public void setContinent(Continent continent) {
+        this.continent = continent;
     }
 }
